@@ -1206,6 +1206,13 @@ ul {
   flex: 1;
 }
 
+@media (max-width: 767px) {
+  .latest-events .container .latest-events-info {
+    max-width: 100%;
+    padding: 20px 0 20px;
+  }
+}
+
 .latest-events .container .latest-events-info .time {
   display: flex;
   justify-content: center;
@@ -1260,7 +1267,6 @@ ul {
 }
 
 .latest-events .container .latest-events-info .text {
-  /* padding: 30px; */
   margin: 50px 0 0;
   text-align: center;
 }
@@ -1281,9 +1287,6 @@ ul {
   text-align: center;
 }
 
-.latest-events .container .subscribe {
-}
-
 .latest-events .container .subscribe form {
   display: flex;
   gap: 30px;
@@ -1291,8 +1294,18 @@ ul {
   margin: 20px auto;
   padding: 20px 40px;
   border: 2px solid #777;
+  border: none;
   border-radius: 50px;
   background-color: var(--section-alt-background-color);
+}
+
+@media (max-width: 767px) {
+  .latest-events .container .subscribe form {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 0;
+  }
 }
 
 .latest-events .container .subscribe form input[type="email"] {
@@ -1309,6 +1322,12 @@ ul {
 
 .latest-events .container .subscribe form input[type="email"]::placeholder {
   transition: opacity var(--main-transition-duration);
+}
+
+@media (max-width: 767px) {
+  .latest-events .container .subscribe form input[type="email"] {
+    border-radius: 0;
+  }
 }
 
 .latest-events
@@ -1331,10 +1350,15 @@ ul {
   background-color: var(--main-color);
 }
 
-.latest-events .container .subscribe form input[type="submit"]:hover{
+.latest-events .container .subscribe form input[type="submit"]:hover {
   background-color: var(--alternative-color);
 }
 
+@media (max-width: 767px) {
+  .latest-events .container .subscribe form input[type="submit"] {
+    border-radius: 0;
+  }
+}
 /*! End Latest Events */
 
 /*! Start Animation */

@@ -23,7 +23,7 @@
 dist/
 build/
 
-# Node modules (if you add npm packages later)
+# Node modules (if add npm packages later)
 node_modules/
 
 # Lock files (for npm or yarn)
