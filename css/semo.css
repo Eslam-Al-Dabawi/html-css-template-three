@@ -1,3 +1,7 @@
+/*=============================================
+  CSS Root Variables
+  Used for consistent theming and easier updates
+=============================================*/
 /*! Start Variables */
 :root {
   --main-color: #2196f3;
@@ -19,6 +23,10 @@
 }
 /*! End Variables */
 
+/*=============================================
+  Global Reset and Base Styles
+  Normalize styles across browsers and set defaults
+=============================================*/
 /*! Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
@@ -54,6 +62,10 @@ ul {
   margin-right: auto;
 }
 
+/*=============================================
+  Responsive Design: Small Screens
+  Breakpoints for devices >= small width (usually tablets)
+=============================================*/
 /* Small Screens */
 @media (min-width: 768px) {
   .container {
@@ -131,9 +143,12 @@ ul {
   animation: fill-from-right var(--main-transition-duration) linear forwards;
 }
 /*? End Main Header Components */
-
 /*! End Components */
 
+/*---------------------------------------------
+  Header Section Styling
+  Contains logo, navigation, and hero section
+----------------------------------------------*/
 /*! Start Header */
 .header {
   position: relative;
@@ -163,6 +178,11 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 /* 
 @media (max-width: 991px) {
   .header .container .logo {
@@ -199,7 +219,6 @@ ul {
 @media (max-width: 991px) {
   .header .container .main-nav {
     max-width: 86%;
-
   }
 } */
 
@@ -216,6 +235,10 @@ ul {
   height: 97px;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 767px) {
   .header .container .main-nav > li > a {
     font-size: 14px;
@@ -270,6 +293,10 @@ ul {
     opacity var(--main-transition-duration);
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 767px) {
   .header .container .main-nav .mega-menu {
     flex-direction: column;
@@ -287,6 +314,10 @@ ul {
   position: relative;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 767px) {
   .header
     .container
@@ -335,6 +366,10 @@ ul {
   max-width: 100%;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 991px) {
   .header .container .main-nav .mega-menu .image img {
     display: none;
@@ -372,6 +407,10 @@ ul {
   flex: 1;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 991px) {
   .landing .container .text {
     text-align: center;
@@ -384,6 +423,10 @@ ul {
   margin: 0;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 767px) {
   .landing .container .text h1 {
     font-size: 30px;
@@ -399,6 +442,10 @@ ul {
   margin: 10px 0 0;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 767px) {
   .landing .container .text p {
     font-size: 16px;
@@ -418,6 +465,10 @@ ul {
   animation: move-up-down 3s linear infinite;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 991px) {
   .landing .container .image img {
     display: none;
@@ -613,6 +664,10 @@ ul {
   border-color: transparent transparent white transparent;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 683px) {
   .features .container .features-content-box .image::after {
     border-width: 0px 0px 220px 650px;
@@ -627,6 +682,10 @@ ul {
   border-width: 180px 500px 180px 0px;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 683px) {
   .features .container .features-content-box:hover .image::after {
     border-width: 220px 650px 220px 0px;
@@ -1033,6 +1092,10 @@ ul {
   max-width: 100%;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 991px) {
   .our-skills .image {
     display: none;
@@ -1095,6 +1158,10 @@ ul {
 }
 
 /*? If we want to keep the image for responsive design  */
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 1199px) {
   .how-it-works .container {
     flex-direction: column;
@@ -1106,6 +1173,10 @@ ul {
 }
 
 /*? If we want to hide the image for responsive design */
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 /* @media (max-width: 1199px) {
   .how-it-works .container .image {
     display: none;
@@ -1124,7 +1195,11 @@ ul {
   border-radius: 8px;
 }
 
-/*? If we hide the image for responsive design or we need to adapt the h3 and the paragraph */
+/*? If we will hide the image for responsive design or we need to adapt the h3 and the paragraph */
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 /* @media (max-width: 667px) {
   .how-it-works .container .how-it-works-info .how-it-works-content-box {
     flex-direction: column;
@@ -1196,6 +1271,10 @@ ul {
   max-width: 450px;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 991px) {
   .latest-events .container .image {
     display: none;
@@ -1206,6 +1285,10 @@ ul {
   flex: 1;
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 767px) {
   .latest-events .container .latest-events-info {
     max-width: 100%;
@@ -1299,6 +1382,10 @@ ul {
   background-color: var(--section-alt-background-color);
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 767px) {
   .latest-events .container .subscribe form {
     flex-direction: column;
@@ -1324,6 +1411,10 @@ ul {
   transition: opacity var(--main-transition-duration);
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 767px) {
   .latest-events .container .subscribe form input[type="email"] {
     border-radius: 0;
@@ -1354,6 +1445,10 @@ ul {
   background-color: var(--alternative-color);
 }
 
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
 @media (max-width: 767px) {
   .latest-events .container .subscribe form input[type="submit"] {
     border-radius: 0;
