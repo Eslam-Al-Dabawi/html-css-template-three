@@ -1,0 +1,32 @@
+# macOS system files
+.DS_Store
+
+# VS Code settings folder
+.vscode/
+
+# Temporary files
+*~
+*.swp
+*.tmp
+*.bak
+*.log
+
+# Sublime Text project files
+*.sublime-workspace
+*.sublime-project
+
+# Cache folders (in case of build tools in future)
+.cache/
+*.sass-cache/
+
+# Build output (if used in future)
+dist/
+build/
+
+# Node modules (if you add npm packages later)
+node_modules/
+
+# Lock files (for npm or yarn)
+package-lock.json
+yarn.lock
+

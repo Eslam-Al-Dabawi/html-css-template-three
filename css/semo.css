@@ -9,6 +9,8 @@
   --section-alt-background-color: #ececec;
   --transparent-color: rgb(15 116 143 / 65%);
 
+  --line-main-height: 1.8;
+
   --section-padding: 100px;
   --main-section-padding-top: 100px;
   --main-section-padding-bottom: 100px;
@@ -649,7 +651,7 @@ ul {
 }
 
 .features .container .features-content-box p {
-  line-height: 2;
+  line-height: var(--line-main-height);
   color: #777;
   margin: 20px auto;
   padding: 10px 20px;
@@ -778,7 +780,7 @@ ul {
 }
 
 .testimonials .container .testimonials-content-box p {
-  line-height: 1.7;
+  line-height: var(--line-main-height);
   color: var(--main-paragraph-color);
   /* margin: 10px 0 10px; */
 }
@@ -1170,7 +1172,7 @@ ul {
 
 .how-it-works .container .how-it-works-info .how-it-works-content-box .text p {
   font-size: 18px;
-  line-height: 1.8;
+  line-height: var(--line-main-height);
   margin-top: 10px;
   color: var(--main-paragraph-color);
 }
@@ -1220,8 +1222,19 @@ ul {
   transition: var(--main-transition-duration);
 }
 
+.latest-events .container .latest-events-info .time .time-unit:hover,
+.latest-events
+  .container
+  .latest-events-info
+  .time
+  .time-unit:hover
+  span.time-measurement-unit {
+  border-color: var(--main-color);
+}
+
 .latest-events .container .latest-events-info .time span {
   display: block;
+  transition: var(--main-transition-duration);
 }
 
 .latest-events
@@ -1247,7 +1260,8 @@ ul {
 }
 
 .latest-events .container .latest-events-info .text {
-  padding: 30px;
+  /* padding: 30px; */
+  margin: 50px 0 0;
   text-align: center;
 }
 
@@ -1258,27 +1272,67 @@ ul {
 .latest-events .container .latest-events-info .text .description {
   margin-top: 20px;
   color: var(--main-paragraph-color);
+  line-height: var(--line-main-height);
 }
 
 .latest-events .container .subscribe {
-  /* max-width: 300px; */
   width: 100%;
   margin-top: 60px;
   text-align: center;
 }
 
 .latest-events .container .subscribe {
-  height: 50px;
+}
+
+.latest-events .container .subscribe form {
+  display: flex;
+  gap: 30px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px 40px;
   border: 2px solid #777;
+  border-radius: 50px;
   background-color: var(--section-alt-background-color);
-  color: var(--main-color);
 }
 
-.latest-events .container .latest-events-info .subscribe form {
-  /* align-items: center; */
+.latest-events .container .subscribe form input[type="email"] {
+  flex: 1;
+  border-radius: 50px;
+  caret-color: var(--main-color);
+  padding: 25px;
+  border: none;
 }
 
-.latest-events .container .latest-events-info .subscribe form > email {
+.latest-events .container .subscribe form input[type="email"]:focus {
+  outline: none;
+}
+
+.latest-events .container .subscribe form input[type="email"]::placeholder {
+  transition: opacity var(--main-transition-duration);
+}
+
+.latest-events
+  .container
+  .subscribe
+  form
+  input[type="email"]:focus::placeholder {
+  opacity: 0;
+}
+
+.latest-events .container .subscribe form input[type="submit"] {
+  color: white;
+  cursor: pointer;
+  transition: var(--main-transition-duration);
+  border: none;
+  border-radius: 50px;
+  padding: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--main-color);
+}
+
+.latest-events .container .subscribe form input[type="submit"]:hover{
+  background-color: var(--alternative-color);
 }
 
 /*! End Latest Events */
