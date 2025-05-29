@@ -1475,7 +1475,6 @@ ul {
   background-color: var(--section-main-background-color);
   text-align: center;
   z-index: 1;
-  /* padding: 30px; */
   box-shadow:
     0px 12px 20px 0px rgb(0 0 0 / 15%),
     0px 2px 4px 0px rgb(0 0 0 / 13%);
@@ -1487,7 +1486,7 @@ ul {
   content: "";
   position: absolute;
   z-index: -1;
-  width: 50px;
+  width: 0;
   height: 50%;
   background-color: #f6f6f6;
   transition: var(--main-transition-duration);
@@ -1502,28 +1501,83 @@ ul {
   bottom: 0;
 }
 
+.pricing-plans .container .pricing-plan-box:hover::before,
+.pricing-plans .container .pricing-plan-box:hover::after {
+  width: 100%;
+}
+
+.pricing-plans .container .most-popular-plan .label {
+  position: absolute;
+  background-color: var(--main-color);
+  width: 50px;
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+
+  /*? The hard way  */
+  /* padding: 10px 20px; */
+  /* /* right: -45px; */
+  /* top: 75px; */
+  /* transform: rotate(90deg); */
+
+  /*? Or Easy Way  */
+  padding: 10px 10px 45px 10px;
+  writing-mode: vertical-rl;
+  right: 25px;
+}
+
+.pricing-plans .container .most-popular-plan .label::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+
+  /*? The Hard Way */
+  /* bottom: -22px; */
+  /* right: -23px; */
+  /* border-width: 50px; */
+
+  /*? The Easy Way */
+  bottom: 0;
+  right: 0;
+  border-width: 25px;
+}
+
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
+@media (min-width: 1200px) {
+  .pricing-plans .container .most-popular-plan {
+    top: -30px;
+  }
+}
+
 .pricing-plans .container .pricing-plan-box .pricing-plan-name {
   font-size: 28px;
   margin: 50px 20px;
 }
 
 .pricing-plans .container .pricing-plan-box .image {
-  display: block;
   width: 80px;
   height: 80px;
-  margin: 30px auto;
+  margin: 25px;
 }
 
 .pricing-plans .container .pricing-plan-box .price-plan {
-  /* margin: 20px auto; */
-  padding: 20px;
+  /*? The Hard Way */
+  /* padding: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+
+  /*? The Easy way */
+  margin-bottom: 20px;
 }
 
 .pricing-plans .container .pricing-plan-box .price-plan .bundle {
+  display: block;
   padding: 10px;
   font-size: 60px;
   font-weight: bolder;
@@ -1531,31 +1585,43 @@ ul {
 }
 
 .pricing-plans .container .pricing-plan-box .price-plan .price-plan-duration {
-  margin-top: 0;
+  color: var(--main-paragraph-color);
 }
 
 .pricing-plans .container .pricing-plan-box ul {
-  margin: 20px;
+  text-align: left;
 }
 
 .pricing-plans .container .pricing-plan-box ul li {
-  padding: 15px 0;
-  border-top: 1px solid #ccc;
+  padding: 20px 30px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.pricing-plans .container .pricing-plan-box ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bolder;
+  margin-right: 15px;
+  color: var(--main-color);
 }
 
 .pricing-plans .container .pricing-plan-box a {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  color: var(--main-color);
+  display: block;
   border: 2px solid var(--main-color);
   border-radius: 8px;
-  padding: 8px 20px;
-  margin: 50px auto;
-  /* text-align: center; */
-  /* align-items: center; */
+  color: var(--main-color);
+  width: fit-content;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 20px;
+  margin: 30px auto 60px;
+}
+
+.pricing-plans .container .pricing-plan-box a:hover {
+  content: "";
+  color: white;
+  background-color: var(--main-color);
+  transition: var(--main-transition-duration);
 }
 
 /*! End Pricing Plans */
