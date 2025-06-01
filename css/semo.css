@@ -13,7 +13,7 @@
   --section-alt-background-color: #ececec;
   --transparent-color: rgb(15 116 143 / 65%);
 
-  --line-main-height: 1.8;
+  --main-line-height: 1.8;
   --main-letter-spacing: -2px;
   --section-padding: 100px;
   --main-section-padding-top: 100px;
@@ -710,7 +710,7 @@ ul {
 }
 
 .features .container .features-content-box p {
-  line-height: var(--line-main-height);
+  line-height: var(--main-line-height);
   color: #777;
   margin: 20px auto;
   padding: 10px 20px;
@@ -839,7 +839,7 @@ ul {
 }
 
 .testimonials .container .testimonials-content-box p {
-  line-height: var(--line-main-height);
+  line-height: var(--main-line-height);
   color: var(--main-paragraph-color);
   /* margin: 10px 0 10px; */
 }
@@ -1247,7 +1247,7 @@ ul {
 
 .how-it-works .container .how-it-works-info .how-it-works-content-box .text p {
   font-size: 18px;
-  line-height: var(--line-main-height);
+  line-height: var(--main-line-height);
   margin-top: 10px;
   color: var(--main-paragraph-color);
 }
@@ -1361,7 +1361,7 @@ ul {
 .latest-events .container .latest-events-info .text .description {
   margin-top: 20px;
   color: var(--main-paragraph-color);
-  line-height: var(--line-main-height);
+  line-height: var(--main-line-height);
 }
 
 .latest-events .container .subscribe {
@@ -1945,6 +1945,130 @@ ul {
 .discount .discount-form-box .content-box .request-a-discount {
 }
 /*! End Discount */
+
+/*! Start Footer */
+.footer {
+  padding: var(--main-section-padding-bottom) 0 0;
+  background-color: #191919;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer .container .footer-content-box h3 {
+  font-size: 50px;
+  margin: 0 0 25px;
+  color: white;
+}
+
+.footer .container .footer-content-box .social-media {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.footer .container .footer-content-box .social-media li {
+  margin-right: 10px;
+}
+
+.footer .container .footer-content-box .social-media li a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #313131;
+  color: #b9b9b9;
+  transition: var(--main-transition-duration);
+}
+
+.footer .container .footer-content-box .social-media li .facebook:hover {
+  background-color: #1877f2;
+}
+
+.footer .container .footer-content-box .social-media li .twitter:hover {
+  background-color: #1da1f2;
+}
+
+.footer .container .footer-content-box .social-media li .youtube:hover {
+  background-color: #ff0000;
+}
+
+.footer .container .footer-content-box .text {
+  color: #b9b9b9;
+  line-height: var(--main-line-height);
+}
+
+.footer .container .footer-content-box .demo-links li {
+  padding: 15px 0;
+  transition: var(--main-transition-duration);
+}
+
+.footer .container .footer-content-box .demo-links li:not(:last-child) {
+  border-bottom: 1px solid #333;
+}
+
+.footer .container .footer-content-box .demo-links li:hover {
+  /* animation: move-to-the-right var(--main-transition-duration) linear; */
+  padding-left: 15px;
+}
+
+.footer .container .footer-content-box .demo-links li a {
+  color: #b9b9b9;
+  transition: var(--main-transition-duration);
+}
+
+.footer .container .footer-content-box .demo-links li:hover a {
+  color: white;
+}
+
+.footer .container .footer-content-box .demo-links li a::before {
+  content: "\F101";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bolder;
+  color: var(--main-color);
+  margin-right: 15px;
+}
+
+.footer .container .footer-content-box .info-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  color: #b9b9b9;
+}
+
+.footer .container .footer-content-box .info-box i {
+  color: var(--main-color);
+  margin-right: 15px;
+  font-size: 28px;
+}
+
+.footer .container .footer-content-box .info-box .info {
+  flex: 1;
+  line-height: calc(var(--main-line-height) - 0.3);
+}
+
+.footer .container .footer-content-box .info-box .contact-us span {
+  display: block;
+}
+
+.footer .container .footer-gallery-images img {
+  width: 75px;
+  margin: 3px;
+  border: 3px solid white;
+}
+
+.footer .copyright {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 30px 0;
+  margin: 50px 0 0;
+  border-top: 2px solid #333;
+}
+/*! End Footer */
 
 /*! Start Animation */
 @keyframes move-up-down {
