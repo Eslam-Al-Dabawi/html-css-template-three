@@ -59,6 +59,10 @@ This project showcases a structured one-page layout featuring multiple sections 
 ![How It Works?](images/screenshots/how-it-works.png)
 ![Latest Events](images/screenshots/latest-events.png)
 ![Pricing Plans](images/screenshots/pricing-plans.png)
+![Top Videos](images/screenshots/top-videos.png)
+![Our Awesome Stats](images/screenshots/our-awesome-stats.png)
+![Request A Discount](images/screenshots/request-a-discount.png)
+
 
 ---
 

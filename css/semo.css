@@ -14,7 +14,7 @@
   --transparent-color: rgb(15 116 143 / 65%);
 
   --line-main-height: 1.8;
-
+  --main-letter-spacing: -2px;
   --section-padding: 100px;
   --main-section-padding-top: 100px;
   --main-section-padding-bottom: 100px;
@@ -418,7 +418,7 @@ ul {
 }
 
 .landing .container .text h1 {
-  letter-spacing: -2px;
+  letter-spacing: var(--main-letter-spacing);
   font-size: 48px;
   margin: 0;
 }
@@ -1813,6 +1813,139 @@ ul {
 }
 /*! End Our Awesome Stats */
 
+/*! Start Discount */
+.discount {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.discount .content-box {
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.discount .content-box h2 {
+  font-size: 45px;
+  text-transform: capitalize;
+  letter-spacing: var(--main-letter-spacing);
+}
+
+.discount .discount-image-box {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  background-image: url(../images/discount-background1.jpg);
+  background-size: cover;
+  color: white;
+  animation: background-shuffle 9s linear infinite;
+}
+
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
+@media (max-width: 991px) {
+  .discount .discount-image-box {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+    padding-top: 70px;
+  }
+}
+
+.discount .discount-image-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(23, 135, 224, 0.97);
+}
+
+.discount .discount-image-box .content-box {
+}
+
+.discount .discount-image-box .content-box .we-have-a-discount {
+}
+
+.discount .discount-image-box .content-box p {
+  padding: 30px;
+  max-width: 500px;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.discount .discount-image-box .content-box .image {
+  max-width: 100%;
+  width: 350px;
+}
+
+.discount .discount-form-box {
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+/*---------------------------------------------
+  Media Queries
+  Responsive adjustments for different screens
+----------------------------------------------*/
+@media (max-width: 991px) {
+  .discount .discount-form-box {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+    padding-top: 30px;
+  }
+}
+
+.discount .discount-form-box .user-input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 30px auto;
+  padding: 10px;
+  text-transform: capitalize;
+  caret-color: var(--main-color);
+  background-color: #fafafa;
+  border: none;
+  border-bottom: 2px solid #cdcdcd;
+}
+
+.discount .discount-form-box textarea.user-input {
+  height: 250px;
+  resize: none;
+}
+
+.discount .discount-form-box .user-input:focus {
+  outline: none;
+}
+.discount .discount-form-box [type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
+  transition: var(--main-transition-duration);
+}
+
+.discount .discount-form-box [type="submit"]:hover {
+  background-color: var(--alternative-color);
+}
+
+.discount .discount-form-box .content-box .request-a-discount {
+}
+/*! End Discount */
+
 /*! Start Animation */
 @keyframes move-up-down {
   0%,
@@ -1882,6 +2015,16 @@ ul {
     width: 200%;
     height: 200%;
     opacity: 0;
+  }
+}
+
+@keyframes background-shuffle {
+  0%,
+  100% {
+    background-image: url(../images/discount-background1.jpg);
+  }
+  50% {
+    background-image: url(../images/discount-background2.jpg);
   }
 }
 /*! End Animation */
